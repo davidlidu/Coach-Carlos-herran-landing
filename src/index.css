@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hover card lift */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(11, 27, 61, 0.12);
+}
+
+/* Button base */
+.btn-primary {
+  background-color: #0B1B3D;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: #132248;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(11, 27, 61, 0.28);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
