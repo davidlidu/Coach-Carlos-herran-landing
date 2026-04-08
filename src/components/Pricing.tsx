@@ -45,19 +45,18 @@ const plans: Plan[] = [
   },
 ];
 
-function PlanCard({ plan }: { plan: Plan }) {
+function PlanCard({ plan }: { plan: Plan; key?: string }) {
   return (
     <div
-      className={`flex flex-col rounded-2xl border bg-white p-8 transition-all duration-300 card-lift ${
-        plan.featured
+      // Se agregó 'h-full' para que todas las tarjetas se estiren y compartan la misma altura
+      className={`flex flex-col h-full rounded-2xl border bg-white p-8 transition-all duration-300 card-lift ${plan.featured
           ? 'border-[#0B1B3D] border-2 shadow-xl md:-translate-y-3 z-10'
           : 'border-[#dde0e8] shadow-sm'
-      }`}
+        }`}
     >
       {/* Name */}
       <h3
         className="text-base font-bold text-center text-[#0B1B3D] mb-6 leading-snug whitespace-pre-line"
-        
       >
         {plan.name}
       </h3>
@@ -89,14 +88,12 @@ function PlanCard({ plan }: { plan: Plan }) {
         ))}
       </ul>
 
-      {/* CTA */}
+      {/* CTA - Se agregó 'mt-auto' para empujar los botones al final sin importar el contenido superior */}
       <button
-        className={`w-full py-3.5 rounded-lg text-sm font-bold tracking-wide transition-all duration-200 ${
-          plan.featured
+        className={`w-full mt-auto py-3.5 rounded-lg text-sm font-bold tracking-wide transition-all duration-200 ${plan.featured
             ? 'bg-[#0B1B3D] text-white hover:bg-[#132248] hover:shadow-lg'
             : 'bg-[#0B1B3D] text-white hover:bg-[#132248] hover:shadow-md'
-        }`}
-        
+          }`}
       >
         Reservar ahora
       </button>
@@ -111,11 +108,11 @@ export default function Pricing() {
       <div className="text-center mb-12">
         <h2
           className="text-4xl md:text-5xl font-black text-[#0B1B3D] mb-5 tracking-tight uppercase"
-          
         >
           Coaching
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+        {/* Se cambió de 'max-w-2xl' a 'w-full md:w-[80%]' para que ocupe el 80% */}
+        <p className="w-full md:w-[80%] mx-auto text-gray-600 text-base md:text-lg leading-relaxed">
           Agentes de Impacto con{' '}
           <span className="font-bold text-gray-900">más de 13 años</span> entrenando agentes que
           generan más de <span className="font-bold text-gray-900">$100 millones</span> en volumen
@@ -124,7 +121,9 @@ export default function Pricing() {
       </div>
 
       {/* Cards grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
+      {/* Se eliminó 'items-start' (que impedía que las tarjetas tuvieran la misma altura) 
+          y se cambió de 'max-w-5xl' a 'max-w-6xl' para darles más anchura */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {plans.map(plan => (
           <PlanCard key={plan.name} plan={plan} />
         ))}

@@ -18,6 +18,7 @@ html {
 .card-lift {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
 .card-lift:hover {
   transform: translateY(-6px);
   box-shadow: 0 24px 48px rgba(11, 27, 61, 0.12);
@@ -32,11 +33,17 @@ html {
   border-radius: 9999px;
   transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
+
 .btn-primary:hover {
   background-color: #132248;
   transform: translateY(-1px);
   box-shadow: 0 8px 24px rgba(11, 27, 61, 0.28);
 }
+
 .btn-primary:active {
   transform: translateY(0);
+}
+
+.color-green {
+  color: #77D990;
 }

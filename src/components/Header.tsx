@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/img/logo-carlos.png';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -9,10 +10,7 @@ export default function Header() {
     <header className="w-full px-6 py-5 flex items-center justify-between relative z-50">
       {/* Logo */}
       <a href="#" className="flex flex-col leading-none select-none">
-        <span className="text-[2rem] font-black text-[#0B1B3D] tracking-tighter leading-none">ch.</span>
-        <span className="text-[0.5rem] font-bold tracking-[0.22em] uppercase text-[#0B1B3D] mt-0.5">
-          Coach Carlos Herrán
-        </span>
+        <img src={logo} alt="Logo" className="w-20 h-20" />
       </a>
 
       {/* Desktop nav — pill centered */}

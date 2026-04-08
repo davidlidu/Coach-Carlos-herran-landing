@@ -1,23 +1,23 @@
 import React from 'react';
+import fotoCoach from '../assets/img/foto-carlos-coach.png';
 
 const stats = [
   { value: '13+', label: 'Más de 13 años de experiencia como coach inmobiliario' },
   { value: '14k+', label: 'Más de 14.000 horas de coaching' },
-  { value: '9+',  label: 'Clientes en más de 9 países' },
+  { value: '9+', label: 'Clientes en más de 9 países' },
 ];
 
 export default function Hero() {
   return (
     <section className="container mx-auto px-6 pb-16 pt-4 flex flex-col md:flex-row items-center gap-10 md:gap-8">
 
-      {/* Left column */}
-      <div className="flex-1 max-w-xl">
-        <p className="text-base md:text-lg font-semibold text-gray-600 mb-2 tracking-wide">
+      {/* Left column (60%) */}
+      <div className="w-full md:w-4/5">
+        <p className="text-[1.2rem] md:text-[1.5rem] text-gray-600 mb-2 tracking-wide">
           Coach Carlos Herrán
         </p>
         <h1
           className="text-[2.4rem] sm:text-5xl md:text-[3.2rem] font-black text-[#0B1B3D] leading-[1.08] mb-10 uppercase"
-          
         >
           ¿Quieres construir un negocio inmobiliario que escale?
         </h1>
@@ -39,22 +39,22 @@ export default function Hero() {
           ))}
         </div>
 
-        <button className="btn-primary px-14 py-4 text-sm uppercase tracking-widest w-full sm:w-auto">
+        <button className="btn-primary px-14 py-4 text-sm uppercase tracking-widest w-full sm:w-auto color-green">
           Comenzar
         </button>
       </div>
 
-      {/* Right column — photo */}
-      <div className="flex-1 flex justify-center md:justify-end">
+      {/* Right column — photo (40%) */}
+      <div className="w-full md:w-2/5 flex justify-center md:justify-end">
         {/* Replace src with coach photo when available */}
         <img
-          src="/coach-photo.jpg"
+          src={fotoCoach}
           alt="Coach Carlos Herrán"
           onError={e => {
             (e.currentTarget as HTMLImageElement).src =
               'https://placehold.co/520x620/0B1B3D/FFFFFF?text=Foto+Coach&font=montserrat';
           }}
-          className="w-full max-w-[420px] md:max-w-[480px] rounded-2xl object-cover object-top shadow-2xl"
+          className="w-full max-w-[320px] md:max-w-[420px] rounded-2xl object-cover object-top"
           style={{ aspectRatio: '4/5' }}
         />
       </div>

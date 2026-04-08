@@ -1,12 +1,14 @@
 import React from 'react';
 import { Facebook, Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
+import logo from '../assets/img/logo-carlos.png';
+
 
 const socials = [
-  { Icon: Facebook,  label: 'Facebook' },
+  { Icon: Facebook, label: 'Facebook' },
   { Icon: Instagram, label: 'Instagram' },
-  { Icon: Twitter,   label: 'X' },
-  { Icon: Linkedin,  label: 'LinkedIn' },
-  { Icon: Youtube,   label: 'YouTube' },
+  //{ Icon: Twitter, label: 'X' },
+  //{ Icon: Linkedin, label: 'LinkedIn' },
+  { Icon: Youtube, label: 'YouTube' },
 ];
 
 export default function Footer() {
@@ -15,7 +17,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 max-w-5xl">
 
         {/* Newsletter */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-14 hidden">
           <p className="text-sm text-gray-600 mb-4 font-medium">
             Recibe estrategias exclusivas directamente en tu bandeja de entrada.
           </p>
@@ -42,15 +44,7 @@ export default function Footer() {
 
           {/* Logo */}
           <div className="flex flex-col">
-            <span
-              className="text-5xl font-black text-[#0B1B3D] leading-none tracking-tighter"
-              
-            >
-              ch.
-            </span>
-            <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase text-[#0B1B3D] mt-1">
-              Coach Carlos Herrán
-            </span>
+            <img src={logo} alt="Logo" className="w-20 h-20" />
           </div>
 
           <div className="flex flex-col sm:flex-row gap-12">
@@ -58,7 +52,7 @@ export default function Footer() {
             <div>
               <h4 className="text-xs font-bold uppercase tracking-widest text-gray-900 mb-4">Contacto</h4>
               <ul className="space-y-3 text-sm text-gray-700">
-                <li><a href="#" className="hover:text-[#0B1B3D] transition-colors">Teléfono</a></li>
+                <li><a href="mailto:Coach@carlosherran.com" className="hover:text-[#0B1B3D] transition-colors">Coach@carlosherran.com</a></li>
                 <li><a href="#" className="hover:text-[#0B1B3D] transition-colors">WhatsApp</a></li>
               </ul>
             </div>
@@ -85,7 +79,7 @@ export default function Footer() {
 
         {/* Legal links */}
         <div className="border-t border-[#dde0e8] pt-6 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-8 text-xs text-gray-500">
-          {['Política de privacidad', 'Términos de servicio', 'Configuración de cookies'].map(t => (
+          {['Política de privacidad', 'Términos de servicio'].map(t => (
             <a key={t} href="#" className="hover:text-[#0B1B3D] underline underline-offset-2 transition-colors">
               {t}
             </a>

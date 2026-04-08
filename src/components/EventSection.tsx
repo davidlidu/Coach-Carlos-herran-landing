@@ -2,9 +2,9 @@ import React from 'react';
 import { Calendar, MonitorPlay, Clock } from 'lucide-react';
 
 const details = [
-  { Icon: Calendar,    label: 'FECHA',    value: 'Jueves 16 de Abril | 1:00 PM hora del Este' },
-  { Icon: MonitorPlay, label: 'FORMATO',  value: 'Entrenamiento en vivo' },
-  { Icon: Clock,       label: 'DURACIÓN', value: '2H' },
+  { Icon: Calendar, label: 'FECHA', value: 'Jueves 16 de Abril | 1:00 PM hora del Este' },
+  { Icon: MonitorPlay, label: 'FORMATO', value: 'Entrenamiento en vivo' },
+  { Icon: Clock, label: 'DURACIÓN', value: '2H' },
 ];
 
 export default function EventSection() {
@@ -13,9 +13,9 @@ export default function EventSection() {
       {/* Outer card — light gray */}
       <div className="bg-[#f5f6f8] border border-[#e2e4e9] rounded-2xl p-8 md:p-12 shadow-sm">
 
+        {/* Se quitó 'font-black' y se agregó 'font-normal' para quitar la negrita */}
         <h2
-          className="text-2xl md:text-3xl lg:text-[2.2rem] font-black text-[#0B1B3D] text-center leading-tight mb-10 uppercase"
-          
+          className="text-2xl md:text-3xl lg:text-[2.2rem] font-bold text-[#0B1B3D] text-center leading-tight mb-10 uppercase"
         >
           Los agentes que trabajan con listings ganan más,{' '}
           <br className="hidden md:block" />
@@ -39,18 +39,18 @@ export default function EventSection() {
 
           {/* Price */}
           <div className="flex-shrink-0 text-white">
-            <p className="text-xs font-bold tracking-widest uppercase opacity-70 mb-1 text-center md:text-right">Precio</p>
+            <p className="text-2xl font-bold tracking-widest uppercase opacity-70 mb-1 text-center md:text-right">Precio</p>
+            {/* Se aumentó el tamaño del texto de 'text-4xl md:text-5xl' a 'text-6xl md:text-7xl' */}
             <p
-              className="text-4xl md:text-5xl font-black tracking-tight text-center md:text-right"
-              
+              className="text-6xl md:text-7xl font-bold tracking-tight text-center md:text-right"
             >
               $5 USD
             </p>
           </div>
         </div>
 
-        {/* Body copy */}
-        <p className="text-gray-700 text-base md:text-lg leading-relaxed text-center max-w-3xl mx-auto">
+        {/* Body copy: se eliminó el style={{ width: '100%' }} que estaba forzando el ancho al 100%, y se ajustó a w-full en móviles y w-[80%] a partir de pantallas medianas */}
+        <p className="text-gray-700 text-base md:text-2xl leading-relaxed text-center mx-auto w-full md:w-[80%]">
           Los agentes que construyen un negocio sostenible trabajan con listings. Un listing genera múltiples
           transacciones. Un comprador te exige todo el tiempo para cerrar una sola. Sin un sistema para
           asegurarlos, trabajas más horas, gastas más energía y produces menos, especialmente en el mercado
@@ -60,7 +60,7 @@ export default function EventSection() {
 
       {/* CTA below card */}
       <div className="flex justify-center mt-10">
-        <button className="btn-primary px-14 py-4 text-sm uppercase tracking-widest">
+        <button className="btn-primary px-14 py-4 text-lg uppercase tracking-widest color-green">
           Reservar mi cupo
         </button>
       </div>
