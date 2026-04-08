@@ -50,7 +50,7 @@ export default function EventSection() {
         </div>
 
         {/* Body copy: se eliminó el style={{ width: '100%' }} que estaba forzando el ancho al 100%, y se ajustó a w-full en móviles y w-[80%] a partir de pantallas medianas */}
-        <p className="text-gray-700 text-base md:text-2xl leading-relaxed text-center mx-auto w-full md:w-[80%]">
+        <p className="text-gray-700 text-base md:text-xl leading-relaxed text-center mx-auto w-full md:w-[85%]">
           Los agentes que construyen un negocio sostenible trabajan con listings. Un listing genera múltiples
           transacciones. Un comprador te exige todo el tiempo para cerrar una sola. Sin un sistema para
           asegurarlos, trabajas más horas, gastas más energía y produces menos, especialmente en el mercado

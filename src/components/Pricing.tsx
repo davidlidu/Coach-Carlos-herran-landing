@@ -50,8 +50,8 @@ function PlanCard({ plan }: { plan: Plan; key?: string }) {
     <div
       // Se agregó 'h-full' para que todas las tarjetas se estiren y compartan la misma altura
       className={`flex flex-col h-full rounded-2xl border bg-white p-8 transition-all duration-300 card-lift ${plan.featured
-          ? 'border-[#0B1B3D] border-2 shadow-xl md:-translate-y-3 z-10'
-          : 'border-[#dde0e8] shadow-sm'
+        ? 'border-[#0B1B3D] border-2 shadow-xl md:-translate-y-3 z-10'
+        : 'border-[#dde0e8] shadow-sm'
         }`}
     >
       {/* Name */}
@@ -91,8 +91,8 @@ function PlanCard({ plan }: { plan: Plan; key?: string }) {
       {/* CTA - Se agregó 'mt-auto' para empujar los botones al final sin importar el contenido superior */}
       <button
         className={`w-full mt-auto py-3.5 rounded-lg text-sm font-bold tracking-wide transition-all duration-200 ${plan.featured
-            ? 'bg-[#0B1B3D] text-white hover:bg-[#132248] hover:shadow-lg'
-            : 'bg-[#0B1B3D] text-white hover:bg-[#132248] hover:shadow-md'
+          ? 'bg-[#0B1B3D] text-white hover:bg-[#132248] hover:shadow-lg'
+          : 'bg-[#0B1B3D] text-white hover:bg-[#132248] hover:shadow-md'
           }`}
       >
         Reservar ahora
@@ -123,7 +123,7 @@ export default function Pricing() {
       {/* Cards grid */}
       {/* Se eliminó 'items-start' (que impedía que las tarjetas tuvieran la misma altura) 
           y se cambió de 'max-w-5xl' a 'max-w-6xl' para darles más anchura */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
         {plans.map(plan => (
           <PlanCard key={plan.name} plan={plan} />
         ))}
