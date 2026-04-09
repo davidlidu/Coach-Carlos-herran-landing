@@ -38,10 +38,11 @@ export default function Hero() {
             </div>
           ))}
         </div>
-
-        <button className="btn-primary px-14 py-4 text-md uppercase tracking-widest w-full sm:w-auto color-green">
-          Comenzar
-        </button>
+        <a href="#camp">
+          <button className="btn-primary px-14 py-4 text-md uppercase tracking-widest w-full sm:w-auto color-green">
+            Quiero el entrenamiento
+          </button>
+        </a>
       </div>
 
       {/* Right column — photo (40%) */}

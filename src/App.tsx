@@ -14,9 +14,15 @@ export default function App() {
     <div className="min-h-screen bg-white text-gray-900 selection:bg-[#0B1B3D] selection:text-white">
       <Header />
       <main>
-        <Hero />
-        <EventSection />
-        <Pricing />
+        <div id="proposito">
+          <Hero />
+        </div>
+        <div id="camp">
+          <EventSection />
+        </div>
+        <div id="servicios">
+          <Pricing />
+        </div>
       </main>
       <Footer />
     </div>

@@ -32,6 +32,7 @@ html {
   letter-spacing: 0.05em;
   border-radius: 9999px;
   transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .btn-primary:hover {

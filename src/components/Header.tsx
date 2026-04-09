@@ -4,21 +4,33 @@ import logo from '../assets/img/logo-carlos.png';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const links = ['Home', 'Proposito', 'Campaña', 'Servicios'];
+
+  // 1. Convertimos los links en objetos con nombre y href (ID)
+  const menuItems = [
+    { name: 'Home', href: '#' },
+    { name: 'Propósito', href: '#proposito' },
+    { name: 'Campaña', href: '#camp' },
+    { name: 'Servicios', href: '#servicios' },
+  ];
 
   return (
     <header className="w-full px-6 py-5 flex items-center justify-between relative z-50">
       {/* Logo */}
-      <a href="#" className="flex flex-col leading-none select-none">
+      <a href="#home" className="flex flex-col leading-none select-none">
         <img src={logo} alt="Logo" className="w-20 h-20" />
       </a>
 
       {/* Desktop nav — pill centered */}
       <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2">
         <ul className="flex items-center bg-[#0B1B3D] text-white rounded-full px-8 py-3 gap-8 text-sm font-semibold tracking-wide shadow-lg">
-          {links.map(l => (
-            <li key={l}>
-              <a href="#" className="hover:text-gray-300 transition-colors duration-200">{l}</a>
+          {menuItems.map((item) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                className="hover:text-gray-300 transition-colors duration-200 color-green"
+              >
+                {item.name}
+              </a>
             </li>
           ))}
         </ul>
@@ -37,14 +49,14 @@ export default function Header() {
       {open && (
         <div className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl md:hidden">
           <ul className="flex flex-col py-4">
-            {links.map(l => (
-              <li key={l}>
+            {menuItems.map((item) => (
+              <li key={item.name}>
                 <a
-                  href="#"
+                  href={item.href}
                   className="block px-8 py-3 text-sm font-semibold text-[#0B1B3D] hover:bg-gray-50 transition-colors"
-                  onClick={() => setOpen(false)}
+                  onClick={() => setOpen(false)} // Cierra el menú al hacer click
                 >
-                  {l}
+                  {item.name}
                 </a>
               </li>
             ))}

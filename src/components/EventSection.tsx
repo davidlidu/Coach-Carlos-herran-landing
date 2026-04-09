@@ -17,9 +17,7 @@ export default function EventSection() {
         <h2
           className="text-2xl md:text-3xl lg:text-[2.2rem] font-bold text-[#0B1B3D] text-center leading-tight mb-10 uppercase"
         >
-          Los agentes que trabajan con listings ganan más,{' '}
-          <br className="hidden md:block" />
-          trabajan menos y duran más en el negocio
+          Sistema de 5 Pasos para Asegurar Listings en Exclusiva
         </h2>
 
         {/* Inner dark card */}
@@ -29,7 +27,7 @@ export default function EventSection() {
             {details.map(({ Icon, label, value }) => (
               <li key={label} className="flex items-center gap-4 text-white">
                 {/*<Icon className="w-7 h-7 flex-shrink-0 opacity-90" strokeWidth={1.8} />*/}
-                <p className="text-base md:text-2xl">
+                <p className="text-base md:text-4xl color-green">
                   {/* <span className="font-bold">{label}:</span>{' '} */}
                   <span className="font-normal">{value}</span>
                 </p>
@@ -42,7 +40,7 @@ export default function EventSection() {
             {/* <p className="text-3xl font-bold tracking-widest uppercase opacity-70 mb-1 text-center md:text-right">Precio</p> */}
             {/* Se aumentó el tamaño del texto de 'text-4xl md:text-5xl' a 'text-6xl md:text-7xl' */}
             <p
-              className="text-6xl md:text-6xl font-bold tracking-tight text-center md:text-right"
+              className="text-6xl md:text-4xl font-bold tracking-tight text-center md:text-right"
             >
               $5 USD
             </p>
@@ -51,6 +49,7 @@ export default function EventSection() {
 
         {/* Body copy: se eliminó el style={{ width: '100%' }} que estaba forzando el ancho al 100%, y se ajustó a w-full en móviles y w-[80%] a partir de pantallas medianas */}
         <p className="text-gray-700 text-base md:text-2xl leading-relaxed text-center mx-auto w-full md:w-[85%]">
+          <b>Los agentes que trabajan con listings ganan más, trabajan menos y duran más en el negocio.</b><br></br>
           Los agentes que construyen un negocio sostenible trabajan con listings. Un listing genera múltiples
           transacciones. Un comprador te exige todo el tiempo para cerrar una sola. Sin un sistema para
           asegurarlos, trabajas más horas, gastas más energía y produces menos, especialmente en el mercado
@@ -60,9 +59,11 @@ export default function EventSection() {
 
       {/* CTA below card */}
       <div className="flex justify-center mt-10">
-        <button className="btn-primary px-14 py-4 text-lg uppercase tracking-widest color-green">
-          Reservar mi cupo
-        </button>
+        <a href="https://buy.stripe.com/fZu28qgrqeFFbxufsL8bS0j">
+          <button className="btn-primary px-14 py-4 text-xl uppercase tracking-widest color-green">
+            Reservar mi cupo
+          </button>
+        </a>
       </div>
     </section>
   );
