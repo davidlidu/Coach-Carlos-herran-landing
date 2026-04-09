@@ -4,7 +4,7 @@ import { Calendar, MonitorPlay, Clock } from 'lucide-react';
 const details = [
   { Icon: Calendar, label: 'FECHA', value: 'Jueves 16 de Abril | 1:00 PM hora del Este' },
   { Icon: MonitorPlay, label: 'FORMATO', value: 'Entrenamiento en vivo' },
-  { Icon: Clock, label: 'DURACIÓN', value: '2H' },
+  { Icon: Clock, label: 'DURACIÓN', value: '2 Horas' },
 ];
 
 export default function EventSection() {
@@ -28,9 +28,9 @@ export default function EventSection() {
           <ul className="space-y-5">
             {details.map(({ Icon, label, value }) => (
               <li key={label} className="flex items-center gap-4 text-white">
-                <Icon className="w-7 h-7 flex-shrink-0 opacity-90" strokeWidth={1.8} />
-                <p className="text-base md:text-lg">
-                  <span className="font-bold">{label}:</span>{' '}
+                {/*<Icon className="w-7 h-7 flex-shrink-0 opacity-90" strokeWidth={1.8} />*/}
+                <p className="text-base md:text-2xl">
+                  {/* <span className="font-bold">{label}:</span>{' '} */}
                   <span className="font-normal">{value}</span>
                 </p>
               </li>
@@ -39,10 +39,10 @@ export default function EventSection() {
 
           {/* Price */}
           <div className="flex-shrink-0 text-white">
-            <p className="text-2xl font-bold tracking-widest uppercase opacity-70 mb-1 text-center md:text-right">Precio</p>
+            {/* <p className="text-3xl font-bold tracking-widest uppercase opacity-70 mb-1 text-center md:text-right">Precio</p> */}
             {/* Se aumentó el tamaño del texto de 'text-4xl md:text-5xl' a 'text-6xl md:text-7xl' */}
             <p
-              className="text-6xl md:text-7xl font-bold tracking-tight text-center md:text-right"
+              className="text-6xl md:text-6xl font-bold tracking-tight text-center md:text-right"
             >
               $5 USD
             </p>
@@ -50,7 +50,7 @@ export default function EventSection() {
         </div>
 
         {/* Body copy: se eliminó el style={{ width: '100%' }} que estaba forzando el ancho al 100%, y se ajustó a w-full en móviles y w-[80%] a partir de pantallas medianas */}
-        <p className="text-gray-700 text-base md:text-xl leading-relaxed text-center mx-auto w-full md:w-[85%]">
+        <p className="text-gray-700 text-base md:text-2xl leading-relaxed text-center mx-auto w-full md:w-[85%]">
           Los agentes que construyen un negocio sostenible trabajan con listings. Un listing genera múltiples
           transacciones. Un comprador te exige todo el tiempo para cerrar una sola. Sin un sistema para
           asegurarlos, trabajas más horas, gastas más energía y produces menos, especialmente en el mercado

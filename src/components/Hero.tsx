@@ -32,14 +32,14 @@ export default function Hero() {
               >
                 {value}
               </span>
-              <span className="text-gray-700 text-base md:text-[1.05rem] font-medium leading-snug">
+              <span className="text-gray-700 text-base md:text-[1.5rem] font-medium leading-snug">
                 {label}
               </span>
             </div>
           ))}
         </div>
 
-        <button className="btn-primary px-14 py-4 text-sm uppercase tracking-widest w-full sm:w-auto color-green">
+        <button className="btn-primary px-14 py-4 text-md uppercase tracking-widest w-full sm:w-auto color-green">
           Comenzar
         </button>
       </div>

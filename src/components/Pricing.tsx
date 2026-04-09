@@ -34,7 +34,7 @@ const plans: Plan[] = [
   },
   {
     name: 'Coaching 1 on 1',
-    price: '$2000',
+    price: '$1500',
     period: '/ Mes',
     features: [
       { bold: 'Acceso Directo 1 a 1:', rest: ' Trabajo exclusivo y directo conmigo, sesión tras sesión.' },
@@ -89,14 +89,16 @@ function PlanCard({ plan }: { plan: Plan; key?: string }) {
       </ul>
 
       {/* CTA - Se agregó 'mt-auto' para empujar los botones al final sin importar el contenido superior */}
-      <button
-        className={`w-full mt-auto py-3.5 rounded-lg text-sm font-bold tracking-wide transition-all duration-200 ${plan.featured
-          ? 'bg-[#0B1B3D] text-white hover:bg-[#132248] hover:shadow-lg'
-          : 'bg-[#0B1B3D] text-white hover:bg-[#132248] hover:shadow-md'
-          }`}
-      >
-        Reservar ahora
-      </button>
+      <a href='https://www.skool.com/coachcarlosherran/plans' >
+        <button style={{ cursor: 'pointer' }}
+          className={`w-full mt-auto py-3.5 rounded-lg text-sm font-bold tracking-wide transition-all duration-200 ${plan.featured
+            ? 'bg-[#0B1B3D] text-white hover:bg-[#132248] hover:shadow-lg'
+            : 'bg-[#0B1B3D] text-white hover:bg-[#132248] hover:shadow-md'
+            }`}
+        >
+          Reservar ahora
+        </button>
+      </a>
     </div>
   );
 }
