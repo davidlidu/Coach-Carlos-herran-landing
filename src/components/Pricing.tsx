@@ -91,7 +91,7 @@ function PlanCard({ plan }: { plan: Plan; key?: string }) {
       {/* CTA - Se agregó 'mt-auto' para empujar los botones al final sin importar el contenido superior */}
       <a href='https://www.skool.com/coachcarlosherran/plans' >
         <button style={{ cursor: 'pointer' }}
-          className={`w-full mt-auto py-3.5 rounded-lg text-sm font-bold tracking-wide transition-all duration-200 ${plan.featured
+          className={`w-full mt-auto py-3.5 rounded-lg text-sm font-bold tracking-wide transition-all color-green duration-200 ${plan.featured
             ? 'bg-[#0B1B3D] text-white hover:bg-[#132248] hover:shadow-lg'
             : 'bg-[#0B1B3D] text-white hover:bg-[#132248] hover:shadow-md'
             }`}
