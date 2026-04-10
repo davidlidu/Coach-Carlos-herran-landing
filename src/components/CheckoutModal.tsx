@@ -102,9 +102,9 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                         <select name="nivelProduccion" required onChange={handleChange}
                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0B1B3D] focus:border-[#0B1B3D] outline-none transition-all bg-white">
                             <option value="">Selecciona tu nivel...</option>
-                            <option value="Principiante">Principiante</option>
-                            <option value="Intermedio">Intermedio</option>
-                            <option value="Avanzado">Avanzado</option>
+                            <option value="Principiante">Principiante - Menos de 10 al año  </option>
+                            <option value="Intermedio">Intermedio - Entre 10 y 20 al año</option>
+                            <option value="Avanzado">Avanzado - Más de 20 al año</option>
                         </select>
                     </div>
 
