@@ -3,7 +3,7 @@ import { Calendar, MonitorPlay, Clock } from 'lucide-react';
 import CheckoutModal from './CheckoutModal'; // <-- IMPORTAMOS EL MODAL
 
 const details = [
-  { Icon: Calendar, label: 'FECHA', value: 'Jueves 16 de Abril | 1:00 PM hora del Este' },
+  { Icon: Calendar, label: 'FECHA', value: 'Jueves 23 de Abril | 1:00 PM hora del Este' },
   { Icon: MonitorPlay, label: 'FORMATO', value: 'Entrenamiento en vivo' },
   { Icon: Clock, label: 'DURACIÓN', value: '2 Horas' },
 ];
