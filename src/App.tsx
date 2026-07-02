@@ -1,28 +1,17 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import Header from './components/Header';
 import Hero from './components/Hero';
 import EventSection from './components/EventSection';
-import Pricing from './components/Pricing';
+import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 selection:bg-[#0B1B3D] selection:text-white">
+    <div className="min-h-screen bg-[#0d0d0d] text-white selection:bg-[#77D990] selection:text-[#0B1B3D]">
       <Header />
       <main>
-        <div id="proposito">
-          <Hero />
-        </div>
-        <div id="camp">
-          <EventSection />
-        </div>
-        <div id="servicios">
-          <Pricing />
-        </div>
+        <Hero />
+        <EventSection />
+        <Testimonials />
       </main>
       <Footer />
     </div>

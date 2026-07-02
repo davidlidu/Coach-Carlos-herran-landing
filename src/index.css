@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Sora", ui-sans-serif, system-ui, sans-serif;
 }
 
 * {
@@ -14,37 +15,34 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hover card lift */
 .card-lift {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card-lift:hover {
   transform: translateY(-6px);
-  box-shadow: 0 24px 48px rgba(11, 27, 61, 0.12);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
 }
 
-/* Button base */
 .btn-primary {
-  background-color: #0B1B3D;
-  color: #fff;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  background-color: #77D990;
+  color: #0B1B3D;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   border-radius: 9999px;
   transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
   cursor: pointer;
+  display: inline-block;
+  text-align: center;
 }
 
 .btn-primary:hover {
-  background-color: #132248;
+  background-color: #5bc47a;
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(11, 27, 61, 0.28);
+  box-shadow: 0 8px 24px rgba(119, 217, 144, 0.4);
 }
 
 .btn-primary:active {
   transform: translateY(0);
-}
-
-.color-green {
-  color: #77D990;
 }
