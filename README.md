@@ -1,20 +1,61 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Coach Carlos Herrán — Sistema de 5 Pasos para Asegurar Listings en Exclusiva
 
-# Run and deploy your AI Studio app
+Landing page de ventas para el programa de coaching inmobiliario de Carlos Herrán, orientado a agentes inmobiliarios que quieren dominar la técnica de captación en exclusiva.
 
-This contains everything you need to run your app locally.
+## Sobre el Proyecto
 
-View your app in AI Studio: https://ai.studio/apps/56346cab-af04-4456-bd64-775bf269dca0
+- **Cliente:** Carlos Herrán — Coach Inmobiliario
+- **Desarrollador:** [DeerSystems](https://deersystems.net)
+- **Stack:** React 19 + TypeScript + Vite + Tailwind CSS v4
+- **Animaciones:** Motion (Framer Motion)
+- **IA:** Google Gemini API (`@google/genai`)
 
-## Run Locally
+## Estructura de la Página
 
-**Prerequisites:**  Node.js
+| Sección | Componente | Descripción |
+|---------|-----------|-------------|
+| Header | `Header.tsx` | Navegación fija con logo y CTA |
+| Hero | `Hero.tsx` | Propuesta de valor principal |
+| Evento | `EventSection.tsx` | Detalles del taller / programa |
+| Precios | `Pricing.tsx` | Planes y modal de checkout |
+| Footer | `Footer.tsx` | Información de contacto |
 
+## Cómo correr el proyecto localmente
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+**Requisitos:** Node.js 18+
+
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+
+2. Copiar variables de entorno y agregar la clave de Gemini:
+   ```bash
+   cp .env.example .env.local
+   # Editar .env.local y poner GEMINI_API_KEY=tu_clave
+   ```
+
+3. Correr en desarrollo:
+   ```bash
+   npm run dev
+   ```
+   La app queda disponible en `http://localhost:3000`
+
+4. Build de producción:
+   ```bash
+   npm run build
+   ```
+
+## Docker
+
+```bash
+docker-compose up --build
+```
+
+## Versiones
+
+- **v1.0 — Versión estable** — Sistema de 5 Pasos para Asegurar Listings en Exclusiva (tag: `v1.0-estable`)
+
+---
+
+Desarrollado por [DeerSystems](https://deersystems.net)
