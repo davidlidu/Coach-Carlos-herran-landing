@@ -22,9 +22,16 @@ export default function Hero() {
 
           {/* Date badge */}
           <div className="mb-6">
-            <div className="inline-flex items-center gap-2.5 bg-[#77D990]/10 border border-[#77D990]/25 text-[#77D990] rounded-full px-4 py-2 text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-[#77D990] flex-shrink-0 animate-pulse" />
-              En vivo y gratis · Miércoles 8 de julio · 2:00 PM ET
+            <div className="inline-flex flex-col items-start gap-1 bg-[#77D990]/10 border border-[#77D990]/25 text-[#77D990] rounded-2xl px-5 py-3">
+              <div className="flex items-center gap-2.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#77D990] flex-shrink-0 animate-pulse" />
+                <span className="text-xl md:text-2xl font-bold tracking-tight">
+                  Miércoles 8 de julio · 2:00 PM MIAMI
+                </span>
+              </div>
+              <span className="text-sm font-medium text-[#77D990]/70 pl-5">
+                En vivo y gratis · cupo limitado
+              </span>
             </div>
           </div>
 
