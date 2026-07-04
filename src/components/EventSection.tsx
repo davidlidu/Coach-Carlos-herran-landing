@@ -1,5 +1,3 @@
-const RESERVATION_URL = 'https://charm-professor-83f.notion.site/87c15c20af0f4e3085c38c8f2af55d8b?pvs=105';
-
 const stats = [
   { value: '13+', label: 'años como coach' },
   { value: '14k+', label: 'horas de coaching' },
@@ -56,17 +54,6 @@ export default function EventSection() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="container mx-auto px-6 pb-6 flex justify-center">
-        <a
-          href={RESERVATION_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-primary px-10 py-4 text-base"
-        >
-          Reservar mi cupo gratis
-        </a>
-      </section>
     </>
   );
 }

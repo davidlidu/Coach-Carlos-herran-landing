@@ -6,9 +6,9 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#0d0d0d] text-white selection:bg-[#77D990] selection:text-[#0B1B3D]">
+    <div className="min-h-screen flex flex-col bg-[#0d0d0d] text-white selection:bg-[#77D990] selection:text-[#0B1B3D]">
       <Header />
-      <main>
+      <main className="flex-1">
         <Hero />
         <EventSection />
         <Testimonials />
