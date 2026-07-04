@@ -1,3 +1,5 @@
+const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/BDrXqjY5yerBCfsKMdIEjL';
+
 const stats = [
   { value: '13+', label: 'años como coach' },
   { value: '14k+', label: 'horas de coaching' },
@@ -52,6 +54,18 @@ export default function EventSection() {
             ))}
           </ul>
         </div>
+      </section>
+
+      {/* CTA */}
+      <section className="container mx-auto px-6 pb-10 flex justify-center">
+        <a
+          href={WHATSAPP_GROUP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary px-10 py-4 text-base"
+        >
+          Únete al grupo de WhatsApp para tener acceso
+        </a>
       </section>
 
     </>
