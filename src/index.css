@@ -11,8 +11,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
+html,
+body {
   scroll-behavior: smooth;
+  background-color: #0d0d0d;
 }
 
 .card-lift {

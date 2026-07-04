@@ -1,3 +1,5 @@
+const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/BDrXqjY5yerBCfsKMdIEjL';
+
 import haydeeImg from '../assets/img/testimonio-haydee.png';
 import tomasImg from '../assets/img/testimonio-tomas.png';
 import juanImg from '../assets/img/testimonio-juan.png';
@@ -26,7 +28,7 @@ export default function Testimonials() {
       </div>
 
       {/* Regular testimonials — two columns */}
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 gap-4 mb-10">
         <div className="rounded-2xl overflow-hidden">
           <img
             src={tomasImg}
@@ -41,6 +43,18 @@ export default function Testimonials() {
             className="w-full h-auto object-cover"
           />
         </div>
+      </div>
+
+      {/* CTA */}
+      <div className="flex justify-center">
+        <a
+          href={WHATSAPP_GROUP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary px-10 py-4 text-base"
+        >
+          Únete al grupo de WhatsApp para tener acceso
+        </a>
       </div>
     </section>
   );
